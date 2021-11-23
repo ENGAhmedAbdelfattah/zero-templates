@@ -3,6 +3,8 @@
  *   All rights reserved.
  */
 /* Start grobal rules */
+@use "import/mixin.scss"as m;
+
 body {
   font-family: 'Cairo', sans-serif;
   font-family: 'Open Sans', sans-serif;
@@ -35,20 +37,116 @@ body {
 }
 
 /* End grobal rules */
+$main-color:#21A3F6;
+$prag-color:#ECECEC;
+$main-duration: 0.3s;
+$height-header: 72px;
 
 //- Start header
 header {
-  padding: 15px;
-  p {
-    font-size: 16pt;
-    letter-spacing: -1.5px;
-    color: #21A3F6;
-    font-weight: bold;
-  }
-  li {
+  .container {
+    @include m.center-flex();
+    flex-wrap: wrap;
+    padding-right: 0;
+    background-color: #eee;
 
+    @media (max-width: 767.98px) {
+      & {
+        padding: 0 15px;
+      }
+    }
+
+    .logo {
+      @include m.center-flex();
+      height: $height-header;
+      width: fit-content;
+      padding-left: 15px;
+
+      @media (max-width: 767.98px) {
+        & {
+          height: $height-header - 20px;
+        }
+      }
+
+      a {
+        width: fit-content;
+        font-size: 16pt;
+        letter-spacing: -1px;
+        color: $main-color;
+        font-weight: bold;
+      }
+    }
+
+    >ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+
+      @media (max-width: 767.98px) {
+        & {
+          justify-content: center;
+        }
+      }
+
+      >li {
+        a {
+          @include m.center-flex();
+          flex-wrap: wrap;
+          width: fit-content;
+          height: $height-header;
+          padding: 0 30px;
+          font-size: 12.5pt;
+          text-transform: capitalize;
+          transform-origin: left;
+          position: relative;
+          overflow: hidden;
+
+          @media (max-width: 767.98px) {
+            & {
+              height: $height-header - 20px;
+              justify-content: c;
+              padding: 0 10px;
+              font-size: 12pt;
+            }
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: $main-color;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            transition: transform $main-duration;
+          }
+
+          &:hover {
+            color: $main-color;
+            background-color: #Fafafa;
+
+            &::before {
+              transform: translate(100%, 0);
+            }
+          }
+        }
+      }
+
+      li:last-of-type {
+        position: relative;
+
+        .mega-menu {
+          display: flex;
+          position: absolute;
+          top: $height-header;
+          right: 0;
+        }
+      }
+    }
   }
 }
+
 //- End header section
 //- End landing section
 //- -----------------------------------------------

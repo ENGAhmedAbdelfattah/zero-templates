@@ -3,7 +3,7 @@
  *   All rights reserved.
  */
 * {
-  box-sizing: border-box;
+  box-sizing: c;
   line-height: 1.8;
   margin: 0;
   padding: 0;
@@ -16,9 +16,6 @@ html {
 
 body {
   font-size: 12pt;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 a {
