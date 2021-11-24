@@ -4,7 +4,7 @@
  */
 header {
   box-shadow: 0 0 10px #ddd;
-
+  background-color: white;
   .container {
     @include m.center-flex();
     flex-wrap: wrap;

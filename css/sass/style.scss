@@ -14,42 +14,96 @@ body {
 @import "import/container";
 /* End grobal rules */
 $main-color:#21A3F6;
-$prag-color:#ECECEC;
+$prag-color:#DFE4E8;
 $main-duration: 0.3s;
 $height-header: 72px;
+$main-padding: 100px;
 
 //- Start header
 @import "import/header";
-
 //- End header section
-//- -----------------------------------------------
+//- -------------------------------------
 //- strat landing section
-section.landing {
-  background: #ECECEC;
-}
-
+@import "import/landing";
 //- End landing section
-//- -----------------------------------------------
-//- Start feature section 
-
-//- End feature section
-//- ---------------------------------------------
+//- -------------------------------------
+//- Start articles section 
+section.articles{
+  .container {
+    padding: $main-padding;
+    h2, %main-h2 {
+      box-sizing: content-box;
+      width: fit-content;
+      padding:15px 20px;
+      margin: 0 auto;
+      border:2px solid black;
+      font-weight: bold;
+      font-size: 22pt;
+      line-height: 1;
+      letter-spacing: -2px;
+      position: relative;
+      transition:background-color $main-duration 0.6s,color $main-duration 0.6s,border $main-duration 0.6s;
+      &::before {
+        @extend %before-after;
+        left: -30px;
+      }
+      &::after {
+        @extend %before-after;
+        right: -30px;
+      }
+      &:hover {
+        background-color: $main-color;
+        color: white;
+        padding:17px 22px;
+        border: none;
+        &::before {
+          @extend %repeat-before-hover;
+          left: 0px;
+        }
+        &::after {
+          @extend %repeat-before-hover;
+          right: 0px;
+        }
+      }
+    }
+  }
+}
+%repeat-before-hover {
+  width: 50% + 1;
+  height: 100%;
+  border-radius: 0%;
+  visibility: hidden;
+}
+%before-after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: $main-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: -1;
+  transition:left $main-duration,right $main-duration,width $main-duration $main-duration,height $main-duration $main-duration,border-radius $main-duration $main-duration ease,visibility 0s 0.3s;
+}
+//- End articles section
+//- -------------------------------------
 //- Start services
 
 //- End services
-//- ----------------------------------------------
+//- -------------------------------------
 //- Start portfolio  -->
 
 //- End portfolio -->
-//- ----------------------------------------------
+//- -------------------------------------
 //- Start about  -->
 
 //- End about -->
-//- ----------------------------------------------
+//- -------------------------------------
 //- Start contact -->
 
 //- End contact -->
-//- ----------------------------------------------
+//- -------------------------------------
 //- Start footer -->
 
 //- End footer -->
