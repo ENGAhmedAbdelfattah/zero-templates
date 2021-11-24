@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>End-less Template</title>
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/resetme.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
@@ -19,28 +19,40 @@
       <div class="container"> 
         <div class="logo"><a #>Ahmed El-Mondy</a></div>
         <ul>
-          <li><a #>articles</a></li>
-          <li><a #>gallery</a></li>
-          <li><a #>features</a></li>
-          <li><a #>other links</a>
-            <div class="mega-menu"><img src="image/megamenu.png" alt="megamenu">
+          <li><a id="articles">articles</a></li>
+          <li><a id="gallery">gallery</a></li>
+          <li><a id="features">features</a></li>
+          <li><a id="otherlinks">other links</a>
+            <ul class="mega-menu"><img src="image/megamenu.png" alt="megamenu">
               <ul>
-                <li><a #>Testimonials</a></li>
-                <li><a #>Team Members</a></li>
-                <li><a #>Services</a></li>
-                <li><a #>Our Skills</a></li>
-                <li><a #>How It Works</a></li>
+                <li><a id="testimonials"><i class="fas fa-comments" fa-fw></i> Testimonials</a></li>
+                <li><a id="teammembers"><i class="fas fa-user" fa-fw></i> Team Members</a></li>
+                <li><a id="services"><i class="far fa-building" fa-fw></i> Services</a></li>
+                <li><a id="our skills"><i class="far fa-check-circle" fa-fw></i> Our Skills</a></li>
+                <li><a id="howitworks"><i class="far fa-clipboard" fa-fw></i> How It Works</a></li>
               </ul>
               <ul>
-                <li><a #>Events, Pricing Plans</a></li>
-                <li><a #>Top Videos</a></li>
-                <li><a #>Stats</a></li>
-                <li><a #>Request A Discount</a></li>
+                <li><a id="events"><i class="far fa-calendar-alt" fa-fw></i> Events</a></li>
+                <li><a id="pricingplans"><i class="fas fa-server" fa-fw></i> Pricing Plans</a></li>
+                <li><a id="topvideos"><i class="far fa-play-circle" fa-fw></i> Top Videos</a></li>
+                <li><a id="stats"><i class="far fa-chart-bar" fa-fw></i> Stats</a></li>
+                <li><a id="requestadiscount"><i class="fas fa-percent" fa-fw></i> Request A Discount</a></li>
               </ul>
-            </div>
+            </ul>
           </li>
         </ul>
       </div>
     </header>
+    <section class="landing">
+      <div class="container">
+        <div class="box">
+          <div class="text">
+            <h1>Welcome, To Elzero World</h1>
+            <p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events</p>
+          </div>
+        </div>
+        <div class="icon"><i class="fas fa-angle-down"></i><i class="fas fa-angle-down"></i></div>
+      </div>
+    </section>
   </body>
 </html>

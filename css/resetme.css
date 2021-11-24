@@ -3,7 +3,7 @@
  *   All rights reserved.
  */
 * {
-  box-sizing: c;
+  box-sizing: border-box;
   line-height: 1.8;
   margin: 0;
   padding: 0;

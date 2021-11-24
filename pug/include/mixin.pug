@@ -1,0 +1,6 @@
+mixin icon-list(listIcone,listName,idList)
+  each element in listIcone
+    if x == False
+      -var x = 0
+    li: a(id = idList ? idList[x] : 'anon') #[i(class = element fa-fw)] #{listName[x]}
+    -var x = x + 1
