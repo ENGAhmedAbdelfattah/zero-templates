@@ -1,0 +1,58 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+// Component
+.main-h2 {
+  width: fit-content;
+  padding: 15px 20px;
+  margin: 0 auto;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 22pt;
+  line-height: 1;
+  letter-spacing: -2px;
+  position: relative;
+  &::before {
+    @extend %before-after;
+    left: -30px;
+  }
+  &::after {
+    @extend %before-after;
+    right: -30px;
+  }
+  &:hover {
+    border: 2px solid white;
+    color: white;
+    transition: color 0.3s 0.7s, border 0.3s 0.7s;
+    &::before {
+      transition: left 0.3s;
+      left: 0;
+      @include m.animate-before-after();
+    }
+    &::after {
+      transition: right 0.3s;
+      right: 0;
+      @include m.animate-before-after();
+    }
+  }
+}
+.arrow-background {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  z-index: 10;
+  .arrow {
+    width: fit-content;
+    border: {
+      top: 0 solid transparent;
+      bottom: 20px solid #ececec;
+      right: 20px solid transparent;
+      left: 20px solid transparent;
+    }
+  }
+}
+// Component

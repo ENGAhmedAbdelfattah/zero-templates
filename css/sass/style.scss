@@ -3,29 +3,18 @@
  *   All rights reserved.
  */
 /* Start grobal rules */
-$main-color:#21A3F6;
-$prag-color:#DFE4E8;
+$main-color: #21a3f6;
+$prag-color: #dfe4e8;
 $main-duration: 0.3s;
 $height-header: 72px;
 $main-padding: 100px;
 
 @use "import/mixin.scss"as m;
-
-%before-after {
-  content: "";
-  width: 13px;
-  height: 13px;
-  background-color: $main-color;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  z-index: -1;
-}
+@import "import/compont";
 
 body {
-  font-family: 'Cairo', sans-serif;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   // background-color: #ddd;
 }
 
@@ -40,14 +29,14 @@ body {
 @import "import/landing";
 //- End landing section
 //- -------------------------------------
-//- Start articles section 
+//- Start articles section
 @import "import/article";
 
 //- End articles section
 //- -------------------------------------
-//- Start services
+//- Start gallery
 
-//- End services
+//- End gallery
 //- -------------------------------------
 //- Start portfolio  -->
 
