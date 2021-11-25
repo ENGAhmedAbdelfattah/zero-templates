@@ -547,18 +547,23 @@ section.gallery .box .image:hover img {
   transition: transform 0.3s;
 }
 
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
 section.features {
   padding: 100px 0;
 }
 section.features .container .box {
   padding: 100px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fill, 350px);
+  row-gap: 60px;
+  column-gap: 30px;
+  justify-content: center;
 }
 section.features .container .box .item1 {
   overflow: hidden;
-  width: 350px;
 }
 section.features .container .box .item1 .image {
   width: 100%;
@@ -667,7 +672,6 @@ section.features .container .box .item1:hover a bottom:before {
 }
 section.features .container .box .item2 {
   overflow: hidden;
-  width: 350px;
 }
 section.features .container .box .item2 .image {
   width: 100%;
@@ -776,7 +780,6 @@ section.features .container .box .item2:hover a bottom:before {
 }
 section.features .container .box .item3 {
   overflow: hidden;
-  width: 350px;
 }
 section.features .container .box .item3 .image {
   width: 100%;

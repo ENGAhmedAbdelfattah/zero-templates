@@ -40,18 +40,5 @@ body {
 //- END GALLERY
 //- -------------------------------------
 //- START FEATURES
-section.features {
-  padding: $main-padding 0;
-  .container {
-    .box {
-      padding: $main-padding 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      @include m.item(1, #f44036);
-      @include m.item(2, #009688);
-      @include m.item(3, #03a9f4);
-    }
-  }
-}
+@import "import/feature";
 //- END FEATURES

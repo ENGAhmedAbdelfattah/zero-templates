@@ -32,7 +32,6 @@ $main-padding: 100px;
 @mixin item($i, $color) {
   .item#{$i} {
     overflow: hidden;
-    width: 350px;
     $color-item: #{$color}; //- local variable
     .image {
       width: 100%;
