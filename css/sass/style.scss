@@ -48,9 +48,9 @@ section.features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 40px;
-      @include m.item(1,#f44036);
-      @include m.item(2,#009688);
-      @include m.item(3,#03A9F4);
+      @include m.item(1, #f44036);
+      @include m.item(2, #009688);
+      @include m.item(3, #03a9f4);
     }
   }
 }

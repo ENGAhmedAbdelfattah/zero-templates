@@ -627,7 +627,6 @@ section.features .container .box .item1 a {
   margin: 30px;
 }
 section.features .container .box .item1 a bottom {
-  height: 100%;
   border: 3px solid #f44036;
   border-radius: 5px;
   padding: 5px 30px;
@@ -636,16 +635,18 @@ section.features .container .box .item1 a bottom {
   color: #f44036;
   position: relative;
   z-index: 10;
-  box-sizing: border-box;
 }
 section.features .container .box .item1 a bottom:before {
   content: "";
   width: 0;
-  height: 100%;
+  height: 103%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
   background-color: #f44036;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1.5px;
+  left: -1.5px;
   z-index: -1;
   transition: color 0.3s, width 0.3s;
 }
@@ -662,7 +663,7 @@ section.features .container .box .item1:hover a bottom {
   color: white;
 }
 section.features .container .box .item1:hover a bottom:before {
-  width: 100%;
+  width: 103%;
 }
 section.features .container .box .item2 {
   overflow: hidden;
@@ -735,7 +736,6 @@ section.features .container .box .item2 a {
   margin: 30px;
 }
 section.features .container .box .item2 a bottom {
-  height: 100%;
   border: 3px solid #009688;
   border-radius: 5px;
   padding: 5px 30px;
@@ -744,16 +744,18 @@ section.features .container .box .item2 a bottom {
   color: #009688;
   position: relative;
   z-index: 10;
-  box-sizing: border-box;
 }
 section.features .container .box .item2 a bottom:before {
   content: "";
   width: 0;
-  height: 100%;
+  height: 103%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
   background-color: #009688;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1.5px;
+  left: -1.5px;
   z-index: -1;
   transition: color 0.3s, width 0.3s;
 }
@@ -770,7 +772,7 @@ section.features .container .box .item2:hover a bottom {
   color: white;
 }
 section.features .container .box .item2:hover a bottom:before {
-  width: 100%;
+  width: 103%;
 }
 section.features .container .box .item3 {
   overflow: hidden;
@@ -795,7 +797,7 @@ section.features .container .box .item3 .image::before {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #03A9F4;
+  background-color: #03a9f4;
   opacity: 0.5;
   position: absolute;
   top: 0;
@@ -822,7 +824,7 @@ section.features .container .box .item3 .content h3::before {
   content: "";
   width: 60%;
   height: 5px;
-  background-color: #03A9F4;
+  background-color: #03a9f4;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -843,25 +845,26 @@ section.features .container .box .item3 a {
   margin: 30px;
 }
 section.features .container .box .item3 a bottom {
-  height: 100%;
-  border: 3px solid #03A9F4;
+  border: 3px solid #03a9f4;
   border-radius: 5px;
   padding: 5px 30px;
   font-size: 16pt;
   font-weight: bold;
-  color: #03A9F4;
+  color: #03a9f4;
   position: relative;
   z-index: 10;
-  box-sizing: border-box;
 }
 section.features .container .box .item3 a bottom:before {
   content: "";
   width: 0;
-  height: 100%;
-  background-color: #03A9F4;
+  height: 103%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background-color: #03a9f4;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1.5px;
+  left: -1.5px;
   z-index: -1;
   transition: color 0.3s, width 0.3s;
 }
@@ -878,7 +881,7 @@ section.features .container .box .item3:hover a bottom {
   color: white;
 }
 section.features .container .box .item3:hover a bottom:before {
-  width: 100%;
+  width: 103%;
 }
 
 /*# sourceMappingURL=style.css.map */
