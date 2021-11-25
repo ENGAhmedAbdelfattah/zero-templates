@@ -3,11 +3,24 @@
  *   All rights reserved.
  */
 // Component
+%before-after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: $main-color;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: -1;
+}
+
 .main-h2 {
   width: fit-content;
   padding: 15px 20px;
   margin: 0 auto;
-  background-color: white;
+  // background-color: white;
+  text-transform: uppercase;
   border: 2px solid black;
   font-weight: bold;
   font-size: 22pt;

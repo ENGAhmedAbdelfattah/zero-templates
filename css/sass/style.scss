@@ -2,9 +2,10 @@
  *   Copyright (c) 2021 
  *   All rights reserved.
  */
-/* Start grobal rules */
+/* START GROBAL RULES */
 $main-color: #21a3f6;
 $prag-color: #dfe4e8;
+$prag-color2: #777;
 $main-duration: 0.3s;
 $height-header: 72px;
 $main-padding: 100px;
@@ -19,21 +20,38 @@ body {
 }
 
 @import "import/container";
-/* End grobal rules */
+/* END GROBAL RULES */
 
-//- Start header
+//- START HEADER
 @import "import/header";
-//- End header section
+//- END HEADER SECTION
 //- -------------------------------------
-//- strat landing section
+//- STRAT LANDING SECTION
 @import "import/landing";
-//- End landing section
+//- END LANDING SECTION
 //- -------------------------------------
-//- Start articles section
+//- START ARTICLES SECTION
 @import "import/article";
 
-//- End articles section
+//- END ARTICLES SECTION
 //- -------------------------------------
-//- Start gallery
+//- START GALLERY
 @import "import/gallery";
-//- End gallery
+//- END GALLERY
+//- -------------------------------------
+//- START FEATURES
+section.features {
+  padding: $main-padding 0;
+  .container {
+    .box {
+      padding: $main-padding 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      @include m.item(1,#f44036);
+      @include m.item(2,#009688);
+      @include m.item(3,#03A9F4);
+    }
+  }
+}
+//- END FEATURES

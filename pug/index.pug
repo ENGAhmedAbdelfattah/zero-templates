@@ -5,35 +5,48 @@ html(lang="en")
   head
     include include/head
   body 
-    //- Start header section
+    //- START HEADER SECTION
     include include/header
-    //- End header
+    //- END HEADER
     //- ----------------------------------
-    //- strat landing section
+    //- STRAT LANDING SECTION
     include include/landing
-    //- End landing section
+    //- END LANDING SECTION
     //- ----------------------------------
-    //- Start articles section 
+    //- START ARTICLES SECTION 
     include include/article
-    //- End articles section
+    //- END ARTICLES SECTION
     //- ----------------------------------
-    //- Start gallery
+    //- START GALLERY
     +arrow-background()
     include include/gallery
-    //- End gallery
+    //- END GALLERY
     //- ----------------------------------
-    //- Start portfolio  -->
+    //- START FEATURES
+    section.features 
+      .container 
+        h2.main-h2 FEATURES
+        .box
+          - for (var y = 1; y <= 3; y++)
+            div(class= "item" + y) 
+              .image
+                img(src="image/features-0" + y + ".jpg" alt="features-0" + y)
+              .content 
+                h3 Quality
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima
+              a(href="#")
+                bottom More
 
-    //- End portfolio -->
+    //- END FEATURES
     //- ----------------------------------
-    //- Start about  -->
+    //- START ABOUT  -->
 
-    //- End about -->
+    //- END ABOUT -->
     //- ----------------------------------
-    //- Start contact -->
+    //- START CONTACT -->
 
-    //- End contact -->
+    //- END CONTACT -->
     //- ----------------------------------
-    //- Start footer -->
+    //- START FOOTER -->
 
-    //- End footer -->
+    //- END FOOTER -->

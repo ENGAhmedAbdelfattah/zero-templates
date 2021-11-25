@@ -2,17 +2,6 @@
  *   Copyright (c) 2021 
  *   All rights reserved.
  */
-%before-after {
-  content: "";
-  width: 13px;
-  height: 13px;
-  background-color: $main-color;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  z-index: -1;
-}
 section.articles{
   position: relative;
   .container {
