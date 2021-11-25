@@ -4,3 +4,13 @@ mixin icon-list(listIcone,listName,idList)
       -var x = 0
     li: a(id = idList ? idList[x] : 'anon') #[i(class = element fa-fw)] #{listName[x]}
     -var x = x + 1
+
+mixin item-article(imagepath,imagetab,h3,p)
+  .image 
+    img(src=imagepath, alt=imagetab)
+  .text
+    h3 #{h3}
+    p #{p}
+  .more
+    a Read More
+    i(class="fas fa-long-arrow-alt-right")
