@@ -6,21 +6,20 @@ html(lang="en")
     include include/head
   body 
     //- Start header section
-    include include/headersection
+    include include/header
     //- End header
     //- ----------------------------------
     //- strat landing section
-    include include/landingsection
+    include include/landing
     //- End landing section
     //- ----------------------------------
     //- Start articles section 
-    include include/articlesection
+    include include/article
     //- End articles section
     //- ----------------------------------
     //- Start gallery
-    section.gallery
-      +arrow-background()
-      h2.main-h2 GALLERY
+    +arrow-background()
+    include include/gallery
     //- End gallery
     //- ----------------------------------
     //- Start portfolio  -->

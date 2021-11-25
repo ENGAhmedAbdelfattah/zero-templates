@@ -15,12 +15,14 @@
   width: fit-content;
   padding: 15px 20px;
   margin: 0 auto;
+  background-color: white;
   border: 2px solid black;
   font-weight: bold;
   font-size: 22pt;
   line-height: 1;
   letter-spacing: -2px;
   position: relative;
+  z-index: 10;
 }
 .main-h2::before {
   left: -30px;
@@ -486,6 +488,63 @@ section.articles .container .box .item .more a {
 }
 section.articles .container .box .item .more i {
   color: #21a3f6;
+}
+
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+section.gallery {
+  background-color: #ececec;
+  padding: 100px 0;
+}
+section.gallery .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding-top: 100px;
+}
+section.gallery .box .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border: 15px solid white;
+  overflow: hidden;
+  position: relative;
+}
+section.gallery .box .image::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: #ffffff3a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+section.gallery .box .image img {
+  width: 100%;
+  height: 100%;
+}
+section.gallery .box .image:hover::before {
+  animation: width-height 0.3s forwards;
+}
+@keyframes width-height {
+  0% {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+section.gallery .box .image:hover img {
+  transform: rotate(6deg) scale(1.2);
+  transition: transform 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
