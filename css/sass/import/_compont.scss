@@ -21,7 +21,7 @@
   margin: 0 auto;
   // background-color: white;
   text-transform: uppercase;
-  border: 2px solid black;
+  border: 3px solid black;
   font-weight: bold;
   font-size: 22pt;
   line-height: 1;
@@ -37,7 +37,7 @@
     right: -30px;
   }
   &:hover {
-    border: 2px solid white;
+    border: 3px solid white;
     color: white;
     transition: color 0.3s 0.7s, border 0.3s 0.7s;
     &::before {
@@ -64,7 +64,7 @@
     width: fit-content;
     border: {
       top: 0 solid transparent;
-      bottom: 20px solid #ececec;
+      bottom: 20px solid $main-background;
       right: 20px solid transparent;
       left: 20px solid transparent;
     }

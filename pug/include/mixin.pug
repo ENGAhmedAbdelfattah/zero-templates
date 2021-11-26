@@ -4,6 +4,8 @@ mixin icon-list(listIcone,listName,idList)
       -var x = 0
     li: a(id = idList ? idList[x] : 'anon') #[i(class = element fa-fw)] #{listName[x]}
     -var x = x + 1
+//- or by index ex each element,index in listIcone
+  listName[index]
 
 mixin item-article(imagepath,imagetab,h3,p)
   .image 
@@ -19,3 +21,15 @@ mixin arrow-background()
   .arrow-background
     - for (var i = 0; i < 50; i++)
       .arrow
+
+mixin testimonials-item(i,h3,p1,star,p2)
+  div(class="item" + i)
+    .content
+      h3 #{h3}
+      p #{p1}
+      .icon 
+        - for(w = 1 ; w <= star; w++)
+          i(class="filled-icon fas fa-star")
+        - for(w = 1 ; w <= (5 - star) ; w++)
+          i(class="far fa-star")
+      p #{p2}

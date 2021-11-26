@@ -3,53 +3,57 @@
  *   All rights reserved.
  */
 section.gallery {
-  background-color: #ececec;
+  background-color: $main-background;
   padding: $main-padding 0;
   // h2 style in compont scss file
-  .box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-    padding-top: $main-padding;
-    .image {
-      @include m.center-flex();
-      height: 300px;
-      border: 15px solid white;
-      overflow: hidden;
-      position: relative;
-      &::before {
-        content: "";
-        width: 0;
-        height: 0;
-        background-color: #ffffff3a;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-      &:hover {
+  .container {
+    padding: 0;
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      justify-content: space-between;
+      padding-top: $main-padding;
+      .image {
+        @include m.center-flex();
+        height: 300px;
+        border: 15px solid white;
+        overflow: hidden;
+        position: relative;
         &::before {
-          animation: width-height $main-duration forwards;
-          @keyframes width-height {
-            0% {
-              width: 0;
-              height: 0;
-              transform: translate(-50%, -50%);
-            }
-            100% {
-              width: 100%;
-              height: 100%;
-            }
-          }
+          content: "";
+          width: 0;
+          height: 0;
+          background-color: #ffffff3a;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 10;
+          transform: translate(-50%, -50%);
         }
         img {
-          transform: rotate(6deg) scale(1.2);
-          transition: transform $main-duration;
+          width: 100%;
+          height: 100%;
+        }
+        &:hover {
+          &::before {
+            animation: width-height $main-duration forwards;
+            @keyframes width-height {
+              0% {
+                width: 0;
+                height: 0;
+                transform: translate(-50%, -50%);
+              }
+              100% {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          img {
+            transform: rotate(6deg) scale(1.2);
+            transition: transform $main-duration;
+          }
         }
       }
     }

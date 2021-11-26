@@ -5,12 +5,12 @@
 section.features {
   padding: $main-padding 0;
   .container {
+    padding: 0;
     .box {
-      padding: $main-padding 0;
       display: grid;
       grid-template-columns: repeat(auto-fill, 350px);
-      row-gap: 60px;
-      column-gap: 30px;
+      gap: 60px;
+      padding: $main-padding 0;
       justify-content: center;
       @include m.item(1, #f44036);
       @include m.item(2, #009688);
