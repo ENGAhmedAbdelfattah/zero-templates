@@ -36,29 +36,13 @@ html(lang="en")
     //- ----------------------------------
     //- START SERVICES
     +arrow-background()
-    section.services
-      .container 
-        h2.main-h2 SERVICES
-        .box
-          -var service = ["Security","Fixing Issues","Location","Coding","Security","Marketing"]
-          -var service_icon = ["fas fa-user-shield","fas fa-tools","fas fa-map-marked-alt","fas fa-laptop-code","fas fa-palette","fas fa-bullhorn"]
-          each icon, index in service
-            .item
-              .content 
-                i(class= service_icon[index] + " fa-5x")
-                h3 #{icon}
-              .info 
-                .num
-                a(href="#"): span Details
+    include include/services
     //- END SERVICES
-section.our-skills
-  .container 
-    h2.main-h2 OUR SKILLS
-    .box
-        .image 
-          img(src="image/skills.png", alt="skills")
-        .content 
-          - for (var q = 1 ; q <= 4; q++)
-            div(class = "item" + q)
-              h3 HTML
-              .rang
+    //- START OUR SKILLS
+    include include/ourskills
+    //- END OUR SKILLS
+    //- ----------------------------------
+    //- START HOW IT WORKS
+    include include/howworks
+    //- END HOW IT WORKS
+    //- ----------------------------------

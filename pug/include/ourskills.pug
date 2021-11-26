@@ -1,0 +1,11 @@
+section.our-skills
+  .container 
+    h2.main-h2 OUR SKILLS
+    .box
+      .image 
+        img(src="image/skills.png" alt="skills")
+      .content 
+        - for (var q = 1 ; q <= 4; q++)
+          div(class = "item" + q)
+            h3 HTML
+            .rang
