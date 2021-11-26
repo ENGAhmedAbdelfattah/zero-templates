@@ -47,110 +47,107 @@ body {
 @import "import/testimonials";
 //- END TESTIMONIALS
 //- -------------------------------------
-//- START TEAM MEMBERS -->
-section.team-members {
+//- START TEAM MEMBERS
+@import "import/team";
+//- END TEAM MEMBERS
+//- ----------------------------------
+//- START SERVICES
+section.services {
   padding: $main-padding 0;
-  background-color: white;
+  background-color: $main-background;
   .container {
     padding: 0;
     .box {
+      padding-top: $main-padding;
       display: grid;
-      grid-template-columns: repeat(auto-fit, 300px);
-      gap: 80px;
-      justify-content: center;
-      padding: $main-padding 0;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 50px;
       .item {
         display: flex;
-        align-items: center;
-        background-color: $main-background;
-        border-radius: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
         position: relative;
-        height: 500px;
-        z-index: 0;
+        transition: $main-duration;
+        counter-increment: num;
+        &:hover {
+          transform: translateY(-10px);
+          &::before {
+            width: 100%;
+          }
+        }
         &::before {
           content: "";
-          width: 100%;
-          height: 100%;
-          border-radius: 15px;
-          background-image: linear-gradient(
-            to left,
-            #e4e4e4 50%,
-            transparent 50%
-          );
-          background-size: 200% 100%;
-          background-position: left bottom;
+          width: 0;
+          height: 5px;
+          background-color: $main-color;
           position: absolute;
           top: 0;
-          right: 0;
-          z-index: -1;
+          left: 50%;
+          transform: translate(-50%, -100%);
           transition: $main-duration;
-        }
-        &:hover {
-          &::before {
-            background-position: right bottom;
-          }
-          .image {
-            filter: grayscale(1);
-          }
-          .content {
-            .text {
-              h3 {
-                color: #777;
-              }
-            }
-          }
-        }
-        .image {
-          width: 100%;
-          height: 300px;
-          border-radius: 15px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: translate(-20%, 25%);
-          overflow: hidden;
-          transition: $main-duration;
-          @media (max-width: 991.98px) {
-            padding-left: 40px;
-          }
-          img {
-            max-width: 100%;
-            height: 100%;
-            border-radius: 15px;
-          }
         }
         .content {
-          width: 100%;
-          height: 100%;
-          display: flex;
+          @include m.center-flex();
           flex-direction: column;
-          justify-content: center;
-          align-items: flex-end;
-          padding: 20px;
-          .social {
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-            height: 80%;
-            justify-content: center;
-            align-items: center;
-            i {
-              display: block;
-              padding: 20px 2px;
-              color: $prag-color2;
-              transition: $main-duration;
-              &:hover {
-                color: $main-color;
-              }
+          padding: 30px;
+          i {
+            display: block;
+            color: #d5d5d5;
+          }
+          h3 {
+            padding: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: $main-color;
+          }
+        }
+        .info {
+          @include m.center-flex();
+          justify-content: space-between;
+          height: 50px;
+          background-color: #f9f9f9;
+          position: relative;
+          .num {
+            @include m.center-flex();
+            height: 100%;
+            padding: 10px;
+            padding-right: 40px;
+            background-color: $main-color;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            position: relative;
+            z-index: 0;
+            &::before {
+              content: "";
+              width: 60px;
+              height: 50px;
+              background-color: #d9d9d9;
+              color: white;
+              transform: translateX(100px) skewX(-35deg);
+              position: absolute;
+              top: 0;
+              right: 0;
+              z-index: 2;
+            }
+            &::after {
+              content: counter(num, decimal-leading-zero);
+              width: 100%;
+              height: 50px;
+              padding: 0 30px;
+              background-color: $main-color;
+              position: absolute;
+              top: 0;
+              left: 0;
             }
           }
-          .text {
-            align-self: flex-start;
-            h3 {
-              font-weight: bold;
-              font-size: 22px;
+          a {
+            span {
+              display: block;
               color: $main-color;
-              transition: $main-duration;
+              padding: 20px;
             }
           }
         }
@@ -158,4 +155,72 @@ section.team-members {
     }
   }
 }
-//- END TEAM MEMBERS -->
+//- END SERVICES
+//- ----------------------------------
+section.our-skills {
+  padding: $main-padding 0;
+  background-color: white;
+  .container {
+    padding: 0;
+    .box {
+      padding-top: $main-padding;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      .image {
+        width: 500px;
+        img {
+          width: 100%;
+        }
+        @media (max-width: 991.98px) {
+          display: none;
+        }
+      }
+      .content {
+        flex: 1;
+        @each $num,$val in (1,80%),(2,85%),(3,70%),(4,80%){
+          .item#{$num} {
+            h3 {
+              font-size: 21px;
+              font-weight: bold;
+              align-items: start;
+              padding: 15px 0;
+            }
+            .rang {
+              width: 100%;
+              height: 30px;
+              background-color: #eeeeee;
+              position: relative;
+              &::before {
+                content: "";
+                width: $val;
+                height: 100%;
+                background-color: $main-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+              &::after {
+                content: "#{$val}";
+                @include m.center-flex();
+                width: fit-content;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+                padding: 7px 5px;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 10px;
+                color: $main-color;
+                position: absolute;
+                top: -20px;
+                right: 0;
+                transform: translate(0, -100%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
