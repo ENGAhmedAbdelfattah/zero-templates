@@ -6,7 +6,6 @@ section.our-skills {
   padding: $main-padding 0;
   background-color: white;
   .container {
-    padding: 0;
     .box {
       padding-top: $main-padding;
       display: flex;
@@ -23,6 +22,7 @@ section.our-skills {
         }
       }
       .content {
+        padding: 0 15px;
         flex: 1;
         @each $num, $val in (1, 80%), (2, 85%), (3, 70%), (4, 80%) {
           .item#{$num} {

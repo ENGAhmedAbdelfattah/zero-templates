@@ -6,17 +6,22 @@ section.how-works {
   padding: $main-padding 0;
   background-color: $main-background;
   .container {
-    padding: 0;
+    padding: 15px;
     .box {
-      padding-top: $main-padding;
-      display: flex;
+      @include m.center-flex();
       flex-wrap: wrap;
-      gap: 100px;
-      justify-content: space-between;
+      padding: $main-padding 15px 0;
+      gap: 90px;
+      @media (max-width: 991.98px){
+        flex-direction: column;
+      }
       .image {
         width: 500px;
         @include m.center-flex();
         justify-content: center;
+        @media (max-width: 991.98px) {
+          width: 300px;
+        }
         img {
           width: 100%;
         }

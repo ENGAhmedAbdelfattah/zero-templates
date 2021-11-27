@@ -54,3 +54,15 @@ button {
   cursor: pointer;
   display: block;
 }
+
+input {
+  outline: none;
+  border: none;
+  display: block;
+}
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+}
