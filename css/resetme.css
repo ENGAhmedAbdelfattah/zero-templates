@@ -37,6 +37,8 @@ h6 {
 
 textarea {
   resize: vertical;
+  border: none;
+  outline: none;
 }
 
 ul {

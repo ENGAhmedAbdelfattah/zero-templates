@@ -16,6 +16,7 @@ $main-background: #ececec;
 body {
   font-family: "Cairo", sans-serif;
   font-family: "Open Sans", sans-serif;
+  caret-color: $main-color;
   // background-color: #ddd;
 }
 
@@ -72,19 +73,16 @@ body {
 //- END PRICING PLANS
 //- ----------------------------------
 //- START TOP VIDEOS
-//- END TOP VIDEOS
-//- ----------------------------------
-//- START TOP VIDEOS
 @import "import/topvideos";
 //- END TOP VIDEOS
 //- ----------------------------------
-//- START TOP VIDEOS
-
-//- END TOP VIDEOS
+//- START OUR AWESOME STATS
+@import "import/ourstats";
+//- END OUR AWESOME STATS
 //- ----------------------------------
-//- START TOP VIDEOS
-
-//- END TOP VIDEOS
+//- START A DISCOUNT
+@import "import/discount";
+//- END A DISCOUNT
 //- ----------------------------------
 //- START TOP VIDEOS
 

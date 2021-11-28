@@ -7,7 +7,6 @@ section.gallery {
   padding: $main-padding 0;
   // h2 style in compont scss file
   .container {
-    padding: 0;
     .box {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
