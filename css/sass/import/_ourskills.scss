@@ -10,7 +10,7 @@ section.our-skills {
       padding-top: $main-padding;
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      row-gap: 30px;
       justify-content: space-between;
       .image {
         width: 500px;
@@ -22,7 +22,6 @@ section.our-skills {
         }
       }
       .content {
-        padding: 0 15px;
         flex: 1;
         @each $num, $val in (1, 80%), (2, 85%), (3, 70%), (4, 80%) {
           .item#{$num} {

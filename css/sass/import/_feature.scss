@@ -9,7 +9,7 @@ section.features {
     .box {
       display: grid;
       grid-template-columns: repeat(auto-fill, 350px);
-      gap: 60px;
+      gap: 40px;
       padding: $main-padding 0;
       justify-content: center;
       @include m.item(1, #f44036);

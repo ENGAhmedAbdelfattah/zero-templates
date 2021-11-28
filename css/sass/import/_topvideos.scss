@@ -12,7 +12,7 @@ section.top-videos {
       @include m.center-flex();
       align-items: flex-start;
       flex-wrap: wrap;
-      margin: $main-padding 15px 0;
+      margin-top: $main-padding;
       border: 1px solid #e2e2e2;
       @media (max-width: 991.98px) {
         flex-direction: column;

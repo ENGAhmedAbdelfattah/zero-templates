@@ -9,20 +9,20 @@ section.testimonials {
     .box {
       padding-top: $main-padding;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 50px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
       justify-content: space-between;
       @for $i from 1 through 6 {
         .item#{$i} {
           background-color: white;
-          padding: 15px;
+          padding: 10px 15px 15px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
           border-radius: 6px;
           position: relative;
           &::before {
             content: "";
-            width: 100px;
-            height: 100px;
+            width: 85px;
+            height: 85px;
             background-image: url(../image/avatar-0#{$i}.png);
             background-repeat: no-repeat;
             background-size: cover;

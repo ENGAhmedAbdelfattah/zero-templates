@@ -4,7 +4,7 @@
  */
 section.discount {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   justify-content: center;
   .box {
     @include m.center-flex();
@@ -52,18 +52,18 @@ section.discount {
       @include m.center-flex();
       flex-direction: column;
       text-align: center;
-      max-width: 570px;
+      max-width: 520px;
       h2 {
-        font-size: 38px;
+        font-size: 40px;
         font-weight: 700;
         color: white;
-        letter-spacing: -3px;
+        letter-spacing: -1px;
       }
       p {
         font-size: 18px;
         color: white;
         line-height: 1.5;
-        padding: 25px 0 15px;
+        padding: 25px 10px 15px;
       }
       .image {
         width: 300px;
@@ -87,9 +87,9 @@ section.discount {
       flex-direction: column;
       justify-content: flex-start;
       h3 {
-        font-size: 38px;
+        font-size: 40px;
         font-weight: 700;
-        letter-spacing: -3px;
+        letter-spacing: -1px;
         margin-bottom: 20px;
         width: 100%;
       }
@@ -103,7 +103,7 @@ section.discount {
           background-color: #f9f9f9;
           border-bottom: 1px solid #cccccc;
           &::placeholder {
-            font-size: 15px;
+            font-size: 16px;
           }
         }
         &[type="submit"] {
@@ -116,6 +116,9 @@ section.discount {
             background-color: #1787e0;
           }
         }
+      }
+      textarea {
+        height: 200px;
       }
     }
   }

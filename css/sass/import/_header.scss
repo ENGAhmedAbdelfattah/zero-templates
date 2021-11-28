@@ -8,13 +8,15 @@ header {
   .container {
     @include m.center-flex();
     flex-wrap: wrap;
+    column-gap: 40px;
     padding-right: 0;
-    // background-color: #eee;
     position: relative;
+    // background-color: #eee;
 
     @media (max-width: 767.98px) {
       & {
         padding: 0 15px;
+        column-gap: 220px;
       }
     }
 
@@ -39,7 +41,7 @@ header {
       }
     }
 
-    >ul {
+    > ul {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -51,10 +53,9 @@ header {
         }
       }
 
-      >li {
-        >a {
+      > li {
+        > a {
           @include m.center-flex();
-          flex-wrap: wrap;
           width: fit-content;
           height: $height-header;
           padding: 0 30px;
@@ -67,7 +68,7 @@ header {
           @media (max-width: 767.98px) {
             & {
               height: $height-header - 20px;
-              justify-content: c;
+              justify-content: center;
               padding: 0 10px;
               font-size: 12pt;
             }
@@ -86,7 +87,7 @@ header {
 
           &:hover {
             color: $main-color;
-            background-color: #Fafafa;
+            background-color: #fafafa;
 
             &::before {
               transform: translate(100%, 0);
@@ -94,8 +95,11 @@ header {
           }
         }
       }
-
+      // start mega menu
       li:last-of-type {
+        a {
+          width: 140px;
+        }
         .mega-menu {
           display: flex;
           flex-wrap: nowrap;
@@ -109,19 +113,19 @@ header {
           right: 0;
           opacity: 0;
           transition: top $main-duration, opacity $main-duration;
-          z-index: -100;
+          z-index: 0;
 
           &:hover {
-            top: $height-header + 3px;
+            top: $height-header + 1px;
             opacity: 1;
-            z-index: 0;
-          }
-
-          @media (max-width: 991.98px) {
-            & {
-              flex-wrap: wrap;
-              font-size: 10px;
+            z-index: 2;
+            @media (max-width: 767.98px) {
+              top: (($height-header + 1) * 2) - 40px;
             }
+          }
+          @media (max-width: 768px) {
+            flex-wrap: wrap;
+            font-size: 10px;
           }
 
           &::before {
@@ -154,42 +158,45 @@ header {
 
           ul {
             width: 100%;
-
-            li {
+            a {
+              display: block;
               min-width: 250px;
-              padding: 5px;
               font-size: 16pt;
               font-weight: 700;
               position: relative;
               z-index: 1;
               overflow: hidden;
-
-              @media (max-width: 767.98px) {}
-
-              &:not(li:last-of-type) {
-                border-bottom: 1px solid $prag-color;
+              color: $main-color;
+              &:not(a:last-of-type) {
+                li {
+                  border-bottom: 1px solid $prag-color;
+                }
               }
-
-              >a {
-                color: $main-color;
-              }
-
-              &:before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: #FAFAFA;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transform: translate(-100%, 0);
-                transition: transform $main-duration;
-              }
-
-              &:hover {
+              li {
+                padding: 5px 15px;
+                i {
+                  font-weight: 400;
+                  &.fa-server, &.fa-percent {
+                    font-weight: 700;
+                  }
+                }
                 &:before {
-                  transform: translate(0, 0);
+                  content: "";
+                  width: 100%;
+                  height: 100%;
+                  background-color: #fafafa;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: -1;
+                  transform: translate(-100%, 0);
+                  transition: transform $main-duration;
+                }
+
+                &:hover {
+                  &:before {
+                    transform: translate(0, 0);
+                  }
                 }
               }
             }
@@ -198,14 +205,14 @@ header {
 
         & {
           a:hover {
-            +.mega-menu {
-              top: $height-header + 3px;
+            + .mega-menu {
+              top: $height-header + 1px;
               opacity: 1;
-              z-index: 0;
+              z-index: 1;
 
               @media (max-width: 767.98px) {
                 & {
-                  top: (($height-header + 3) * 2) - 40px;
+                  top: (($height-header + 1) * 2) - 40px;
                 }
               }
             }

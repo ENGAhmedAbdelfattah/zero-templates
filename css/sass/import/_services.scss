@@ -5,12 +5,14 @@
 section.services {
   padding: $main-padding 0;
   background-color: $main-background;
+  position: relative;
+  z-index: 0;
   .container {
     .box {
       padding-top: $main-padding;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 50px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
       .item {
         display: flex;
         flex-direction: column;
@@ -44,6 +46,7 @@ section.services {
           i {
             display: block;
             color: #d5d5d5;
+            font-weight: bold;
           }
           h3 {
             padding: 10px;

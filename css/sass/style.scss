@@ -15,7 +15,6 @@ $main-background: #ececec;
 
 body {
   font-family: "Cairo", sans-serif;
-  font-family: "Open Sans", sans-serif;
   caret-color: $main-color;
   // background-color: #ddd;
 }
@@ -84,7 +83,7 @@ body {
 @import "import/discount";
 //- END A DISCOUNT
 //- ----------------------------------
-//- START TOP VIDEOS
-
-//- END TOP VIDEOS
+//- START FOOTER
+@import "import/footer";
+//- END TFOOTER
 //- ----------------------------------
