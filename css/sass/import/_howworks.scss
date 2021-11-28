@@ -12,7 +12,7 @@ section.how-works {
       flex-wrap: wrap;
       padding: $main-padding 15px 0;
       gap: 90px;
-      @media (max-width: 991.98px){
+      @media (max-width: 991.98px) {
         flex-direction: column;
       }
       .image {
