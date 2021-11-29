@@ -50,8 +50,9 @@ ul {
 input,
 input[type="submit"],
 button {
-  border: none;
   display: block;
+  border: none;
+  outline: none;
 }
 
 input[type="submit"],
