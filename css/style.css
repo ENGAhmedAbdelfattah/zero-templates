@@ -402,6 +402,11 @@ section.landing .container .box {
   padding-bottom: 100px;
   gap: 50px;
 }
+@media (max-width: 991.98px) {
+  section.landing .container .box {
+    gap: 0;
+  }
+}
 section.landing .container .box .text {
   margin: auto;
   padding: 20px 0;
