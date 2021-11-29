@@ -5,7 +5,9 @@ section.our-skills(id="our-skills")
       .image 
         img(src="image/skills.png" alt="skills")
       .content 
+        -var head_skills = ["HTML", "CSS", "JavaScript", "Python"]
         - for (var q = 1 ; q <= 4; q++)
+          -var d = q - 1
           div(class = "item" + q)
-            h3 HTML
+            h3 #{head_skills[d]}
             .rang
