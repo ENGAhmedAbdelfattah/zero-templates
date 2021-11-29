@@ -268,12 +268,12 @@ header .container > ul > li > a:hover::before {
 header .container > ul li:last-of-type a {
   width: 140px;
 }
-header .container > ul li:last-of-type .mega-menu {
+header .container > ul li:last-of-type ul.mega-menu {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
-  gap: 20px;
+  column-gap: 20px;
   padding: 30px;
   background-color: white;
   position: absolute;
@@ -283,23 +283,24 @@ header .container > ul li:last-of-type .mega-menu {
   transition: top 0.3s, opacity 0.3s;
   z-index: 0;
 }
-header .container > ul li:last-of-type .mega-menu:hover {
+header .container > ul li:last-of-type ul.mega-menu:hover {
   top: 73px;
   opacity: 1;
   z-index: 2;
 }
 @media (max-width: 767.98px) {
-  header .container > ul li:last-of-type .mega-menu:hover {
+  header .container > ul li:last-of-type ul.mega-menu:hover {
     top: 106px;
   }
 }
 @media (max-width: 768px) {
-  header .container > ul li:last-of-type .mega-menu {
+  header .container > ul li:last-of-type ul.mega-menu {
     flex-wrap: wrap;
     font-size: 10px;
+    width: 100%;
   }
 }
-header .container > ul li:last-of-type .mega-menu::before {
+header .container > ul li:last-of-type ul.mega-menu::before {
   content: "";
   width: 100%;
   height: 3px;
@@ -308,25 +309,28 @@ header .container > ul li:last-of-type .mega-menu::before {
   bottom: 0;
   left: 0;
 }
-header .container > ul li:last-of-type .mega-menu img {
+header .container > ul li:last-of-type ul.mega-menu img {
   display: block;
   height: 300px;
 }
 @media (max-width: 991.98px) {
-  header .container > ul li:last-of-type .mega-menu img {
+  header .container > ul li:last-of-type ul.mega-menu img {
     display: none;
     height: 200px;
   }
 }
 @media (max-width: 1199.98px) {
-  header .container > ul li:last-of-type .mega-menu img {
+  header .container > ul li:last-of-type ul.mega-menu img {
     height: 200px;
   }
 }
-header .container > ul li:last-of-type .mega-menu ul {
+header .container > ul li:last-of-type ul.mega-menu ul {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
-header .container > ul li:last-of-type .mega-menu ul a {
+header .container > ul li:last-of-type ul.mega-menu ul a {
+  width: 100%;
   display: block;
   min-width: 250px;
   font-size: 16pt;
@@ -336,19 +340,19 @@ header .container > ul li:last-of-type .mega-menu ul a {
   overflow: hidden;
   color: #21a3f6;
 }
-header .container > ul li:last-of-type .mega-menu ul a:not(a:last-of-type) li {
+header .container > ul li:last-of-type ul.mega-menu ul a:not(a:last-of-type) li {
   border-bottom: 1px solid #dfe4e8;
 }
-header .container > ul li:last-of-type .mega-menu ul a li {
+header .container > ul li:last-of-type ul.mega-menu ul a li {
   padding: 5px 15px;
 }
-header .container > ul li:last-of-type .mega-menu ul a li i {
+header .container > ul li:last-of-type ul.mega-menu ul a li i {
   font-weight: 400;
 }
-header .container > ul li:last-of-type .mega-menu ul a li i.fa-server, header .container > ul li:last-of-type .mega-menu ul a li i.fa-percent {
+header .container > ul li:last-of-type ul.mega-menu ul a li i.fa-server, header .container > ul li:last-of-type ul.mega-menu ul a li i.fa-percent {
   font-weight: 700;
 }
-header .container > ul li:last-of-type .mega-menu ul a li:before {
+header .container > ul li:last-of-type ul.mega-menu ul a li:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -360,8 +364,13 @@ header .container > ul li:last-of-type .mega-menu ul a li:before {
   transform: translate(-100%, 0);
   transition: transform 0.3s;
 }
-header .container > ul li:last-of-type .mega-menu ul a li:hover:before {
+header .container > ul li:last-of-type ul.mega-menu ul a li:hover:before {
   transform: translate(0, 0);
+}
+@media (max-width: 767.98px) {
+  header .container > ul li:last-of-type ul.mega-menu ul a:last-of-type li {
+    border-bottom: 1px solid #dfe4e8;
+  }
 }
 header .container > ul li:last-of-type a:hover + .mega-menu {
   top: 73px;
