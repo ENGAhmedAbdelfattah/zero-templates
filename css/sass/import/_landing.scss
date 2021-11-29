@@ -71,6 +71,16 @@ section.landing {
           transform: translate(0, 30px);
           animation: up-down 3s linear 0s infinite alternate-reverse;
 
+          @-webkit-keyframes up-down {
+            from {
+              transform: translate(0, 30px);
+            }
+
+            to {
+              transform: translate(0, -24px);
+            }
+          }
+
           @keyframes up-down {
             from {
               transform: translate(0, 30px);
@@ -91,9 +101,30 @@ section.landing {
     }
 
     .icon {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       margin: 0 auto;
-      animation: up-down-2 1.5s infinite;
+      -webkit-animation: up-down-2 1.5s infinite;
+              animation: up-down-2 1.5s infinite;
+
+      @-webkit-keyframes up-down-2 {
+        0% {
+          transform: translate(0, 0);
+        }
+
+        50% {
+          transform: translate(0, 20px);
+        }
+
+        75% {
+          transform: translate(0, 10px);
+        }
+
+        100% {
+          transform: translate(0, 20px);
+        }
+      }
 
       @keyframes up-down-2 {
         0% {

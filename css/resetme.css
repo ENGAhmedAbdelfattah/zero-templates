@@ -29,7 +29,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+th,
+ul {
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -43,28 +45,17 @@ textarea {
 
 ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-th {
-  font-weight: 400;
-}
-
+input,
+input[type="submit"],
 button {
   border: none;
-  cursor: pointer;
   display: block;
 }
 
-input {
-  outline: none;
-  border: none;
-  display: block;
-}
-input[type="submit"] {
-  border: none;
+input[type="submit"],
+button {
   cursor: pointer;
-  display: block;
   background-color: transparent;
 }

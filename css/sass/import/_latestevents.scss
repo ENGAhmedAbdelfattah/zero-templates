@@ -96,6 +96,8 @@ section.latest-events {
     form {
       @include m.center-flex();
       gap: 30px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       padding: 30px;
       border-radius: 55px;
@@ -115,17 +117,55 @@ section.latest-events {
           padding: 15px;
           border-radius: 0;
         }
-        &::placeholder {
+        &::-webkit-input-placeholder {
+          -webkit-transition: $main-duration;
+          transition: $main-duration;
+          width: -webkit-fit-content;
+          width: fit-content;
+        }
+        &::-moz-placeholder {
+          -moz-transition: $main-duration;
+          transition: $main-duration;
+          width: -moz-fit-content;
+          width: fit-content;
+        }
+        &:-ms-input-placeholder {
+          -ms-transition: $main-duration;
           transition: $main-duration;
           width: fit-content;
         }
+        &::-ms-input-placeholder {
+          -ms-transition: $main-duration;
+          transition: $main-duration;
+          width: fit-content;
+        }
+        &::placeholder {
+          transition: $main-duration;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+        }
         &:focus {
+          &::-webkit-input-placeholder {
+            opacity: 0;
+          }
+          &::-moz-placeholder {
+            opacity: 0;
+          }
+          &:-ms-input-placeholder {
+            opacity: 0;
+          }
+          &::-ms-input-placeholder {
+            opacity: 0;
+          }
           &::placeholder {
             opacity: 0;
           }
         }
       }
       input[type="submit"] {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         padding: 20px;
         border-radius: 30px;

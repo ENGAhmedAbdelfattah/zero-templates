@@ -32,7 +32,16 @@ section.discount {
       &:first-of-type {
         opacity: 1;
         z-index: -2;
-        animation: opacity-fill 5s 0s infinite alternate;
+        -webkit-animation: opacity-fill 5s 0s infinite alternate;
+                animation: opacity-fill 5s 0s infinite alternate;
+        @-webkit-keyframes opacity-fill {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
         @keyframes opacity-fill {
           0% {
             opacity: 1;
@@ -102,6 +111,18 @@ section.discount {
         &:not(input[type="submit"]) {
           background-color: #f9f9f9;
           border-bottom: 1px solid #cccccc;
+          &::-webkit-input-placeholder {
+            font-size: 16px;
+          }
+          &::-moz-placeholder {
+            font-size: 16px;
+          }
+          &:-ms-input-placeholder {
+            font-size: 16px;
+          }
+          &::-ms-input-placeholder {
+            font-size: 16px;
+          }
           &::placeholder {
             font-size: 16px;
           }

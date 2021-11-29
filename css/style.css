@@ -24,6 +24,8 @@
 }
 
 .main-h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 15px 20px;
   margin: 0 auto;
@@ -50,7 +52,20 @@
 .main-h2:hover::before {
   transition: left 0.3s;
   left: 0;
+  -webkit-animation: move 0.5s 0.3s forwards;
   animation: move 0.5s 0.3s forwards;
+}
+@-webkit-keyframes move {
+  0% {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+  100% {
+    width: 52%;
+    height: 100%;
+    border-radius: 0%;
+  }
 }
 @keyframes move {
   0% {
@@ -67,7 +82,20 @@
 .main-h2:hover::after {
   transition: right 0.3s;
   right: 0;
+  -webkit-animation: move 0.5s 0.3s forwards;
   animation: move 0.5s 0.3s forwards;
+}
+@-webkit-keyframes move {
+  0% {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+  100% {
+    width: 52%;
+    height: 100%;
+    border-radius: 0%;
+  }
 }
 @keyframes move {
   0% {
@@ -95,6 +123,8 @@
   z-index: 2;
 }
 .spikes .arrow {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-top: 0 solid transparent;
   border-bottom: 20px solid #ececec;
@@ -148,6 +178,7 @@ header .container {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  -moz-column-gap: 40px;
   column-gap: 40px;
   padding-right: 0;
   position: relative;
@@ -155,6 +186,7 @@ header .container {
 @media (max-width: 767.98px) {
   header .container {
     padding: 0 15px;
+    -moz-column-gap: 220px;
     column-gap: 220px;
   }
 }
@@ -163,6 +195,8 @@ header .container .logo {
   justify-content: center;
   align-items: center;
   height: 72px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding-left: 15px;
 }
@@ -172,6 +206,8 @@ header .container .logo {
   }
 }
 header .container .logo a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 16pt;
   letter-spacing: -1px;
@@ -193,6 +229,8 @@ header .container > ul > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 72px;
   padding: 0 30px;
@@ -407,6 +445,14 @@ section.landing .container .box .image img {
   transform: translate(0, 30px);
   animation: up-down 3s linear 0s infinite alternate-reverse;
 }
+@-webkit-keyframes up-down {
+  from {
+    transform: translate(0, 30px);
+  }
+  to {
+    transform: translate(0, -24px);
+  }
+}
 @keyframes up-down {
   from {
     transform: translate(0, 30px);
@@ -421,9 +467,26 @@ section.landing .container .box .image img {
   }
 }
 section.landing .container .icon {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  -webkit-animation: up-down-2 1.5s infinite;
   animation: up-down-2 1.5s infinite;
+}
+@-webkit-keyframes up-down-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  75% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 20px);
+  }
 }
 @keyframes up-down-2 {
   0% {
@@ -471,7 +534,16 @@ section.articles .container .box .item:hover {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 section.articles .container .box .item:hover .more i {
+  -webkit-animation: move-arrow-little 0.8s linear 0s infinite;
   animation: move-arrow-little 0.8s linear 0s infinite;
+}
+@-webkit-keyframes move-arrow-little {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(8px);
+  }
 }
 @keyframes move-arrow-little {
   0% {
@@ -556,7 +628,19 @@ section.gallery .container .box .image img {
   height: 100%;
 }
 section.gallery .container .box .image:hover::before {
+  -webkit-animation: width-height 0.3s forwards;
   animation: width-height 0.3s forwards;
+}
+@-webkit-keyframes width-height {
+  0% {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
 }
 @keyframes width-height {
   0% {
@@ -636,6 +720,8 @@ section.features .container .box .item1 .content h3 {
   font-size: 40px;
   font-weight: bold;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 section.features .container .box .item1 .content h3::before {
@@ -746,6 +832,8 @@ section.features .container .box .item2 .content h3 {
   font-size: 40px;
   font-weight: bold;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 section.features .container .box .item2 .content h3::before {
@@ -856,6 +944,8 @@ section.features .container .box .item3 .content h3 {
   font-size: 40px;
   font-weight: bold;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 section.features .container .box .item3 .content h3::before {
@@ -1319,6 +1409,7 @@ section.team-members .container .box .item:hover::before {
   background-position: right bottom;
 }
 section.team-members .container .box .item:hover .image {
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
 section.team-members .container .box .item:hover .content .text h3 {
@@ -1357,6 +1448,8 @@ section.team-members .container .box .item .content {
 section.team-members .container .box .item .content .social {
   display: flex;
   flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 80%;
   justify-content: center;
@@ -1548,6 +1641,8 @@ section.our-skills .container .box .content .item1 .rang::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border: 1px solid #cccccc;
   border-radius: 6px;
@@ -1587,6 +1682,8 @@ section.our-skills .container .box .content .item2 .rang::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border: 1px solid #cccccc;
   border-radius: 6px;
@@ -1626,6 +1723,8 @@ section.our-skills .container .box .content .item3 .rang::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border: 1px solid #cccccc;
   border-radius: 6px;
@@ -1665,6 +1764,8 @@ section.our-skills .container .box .content .item4 .rang::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border: 1px solid #cccccc;
   border-radius: 6px;
@@ -1887,6 +1988,8 @@ section.latest-events .container form {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 30px;
   border-radius: 55px;
@@ -1912,14 +2015,52 @@ section.latest-events .container form input[type=email] {
     border-radius: 0;
   }
 }
-section.latest-events .container form input[type=email]::placeholder {
+section.latest-events .container form input[type=email]::-webkit-input-placeholder {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+section.latest-events .container form input[type=email]::-moz-placeholder {
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.latest-events .container form input[type=email]:-ms-input-placeholder {
+  -ms-transition: 0.3s;
   transition: 0.3s;
   width: fit-content;
+}
+section.latest-events .container form input[type=email]::-ms-input-placeholder {
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  width: fit-content;
+}
+section.latest-events .container form input[type=email]::placeholder {
+  transition: 0.3s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.latest-events .container form input[type=email]:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+section.latest-events .container form input[type=email]:focus::-moz-placeholder {
+  opacity: 0;
+}
+section.latest-events .container form input[type=email]:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+section.latest-events .container form input[type=email]:focus::-ms-input-placeholder {
+  opacity: 0;
 }
 section.latest-events .container form input[type=email]:focus::placeholder {
   opacity: 0;
 }
 section.latest-events .container form input[type=submit] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 20px;
   border-radius: 30px;
@@ -1998,6 +2139,8 @@ section.pricing-plans .container .box .item .popular {
   position: absolute;
   top: 0;
   right: 20px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
 }
 section.pricing-plans .container .box .item .popular::after {
@@ -2354,7 +2497,16 @@ section.discount .box > img {
 section.discount .box > img:first-of-type {
   opacity: 1;
   z-index: -2;
+  -webkit-animation: opacity-fill 5s 0s infinite alternate;
   animation: opacity-fill 5s 0s infinite alternate;
+}
+@-webkit-keyframes opacity-fill {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes opacity-fill {
   0% {
@@ -2433,6 +2585,22 @@ section.discount form .content textarea:not(input[type=submit]) {
   background-color: #f9f9f9;
   border-bottom: 1px solid #cccccc;
 }
+section.discount form .content input:not(input[type=submit])::-webkit-input-placeholder,
+section.discount form .content textarea:not(input[type=submit])::-webkit-input-placeholder {
+  font-size: 16px;
+}
+section.discount form .content input:not(input[type=submit])::-moz-placeholder,
+section.discount form .content textarea:not(input[type=submit])::-moz-placeholder {
+  font-size: 16px;
+}
+section.discount form .content input:not(input[type=submit]):-ms-input-placeholder,
+section.discount form .content textarea:not(input[type=submit]):-ms-input-placeholder {
+  font-size: 16px;
+}
+section.discount form .content input:not(input[type=submit])::-ms-input-placeholder,
+section.discount form .content textarea:not(input[type=submit])::-ms-input-placeholder {
+  font-size: 16px;
+}
 section.discount form .content input:not(input[type=submit])::placeholder,
 section.discount form .content textarea:not(input[type=submit])::placeholder {
   font-size: 16px;
@@ -2499,6 +2667,8 @@ footer .container .box.info .social i {
   display: block;
   background-color: #313131;
   font-size: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   justify-content: center;
@@ -2597,6 +2767,8 @@ footer .container .box.address .item i.fa-clock {
   font-weight: normal;
 }
 footer .container .box.image {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;

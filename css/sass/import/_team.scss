@@ -44,7 +44,8 @@ section.team-members {
             background-position: right bottom;
           }
           .image {
-            filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+                    filter: grayscale(1);
           }
           .content {
             .text {
@@ -84,6 +85,8 @@ section.team-members {
           .social {
             display: flex;
             flex-direction: column;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
             height: 80%;
             justify-content: center;

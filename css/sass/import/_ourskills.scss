@@ -48,6 +48,8 @@ section.our-skills {
               &::after {
                 content: "#{$val}";
                 @include m.center-flex();
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
                 width: fit-content;
                 border: 1px solid #cccccc;
                 border-radius: 6px;

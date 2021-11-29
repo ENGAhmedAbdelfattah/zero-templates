@@ -16,6 +16,8 @@
 }
 
 .main-h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 15px 20px;
   margin: 0 auto;
@@ -67,6 +69,8 @@
   left: 0;
   z-index: 2;
   .arrow {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     border: {
       top: 0 solid transparent;

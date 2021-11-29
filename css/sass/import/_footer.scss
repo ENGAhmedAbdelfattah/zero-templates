@@ -40,6 +40,8 @@ footer {
             display: block;
             background-color: #313131;
             font-size: 20px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
             @include m.center-flex();
             width: 50px;
@@ -132,6 +134,8 @@ footer {
         }
       }
       &.image {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         @include m.center-flex();
         flex-wrap: wrap;

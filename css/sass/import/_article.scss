@@ -22,7 +22,16 @@ section.articles {
           box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
           .more {
             i {
-              animation: move-arrow-little 0.8s linear 0s infinite;
+              -webkit-animation: move-arrow-little 0.8s linear 0s infinite;
+                      animation: move-arrow-little 0.8s linear 0s infinite;
+              @-webkit-keyframes move-arrow-little {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(8px);
+                }
+              }
               @keyframes move-arrow-little {
                 0% {
                   transform: translateX(0);
