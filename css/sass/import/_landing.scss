@@ -27,7 +27,7 @@ section.landing {
       padding-bottom: 100px;
       gap: 50px;
       @media (max-width: 991.98px) {
-        gap: 0;
+        justify-content: center;
       }
       .text {
         margin: auto;

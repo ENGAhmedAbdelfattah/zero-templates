@@ -404,7 +404,7 @@ section.landing .container .box {
 }
 @media (max-width: 991.98px) {
   section.landing .container .box {
-    gap: 0;
+    justify-content: center;
   }
 }
 section.landing .container .box .text {
