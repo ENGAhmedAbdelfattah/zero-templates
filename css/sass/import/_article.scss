@@ -23,7 +23,7 @@ section.articles {
           .more {
             i {
               -webkit-animation: move-arrow-little 0.8s linear 0s infinite;
-                      animation: move-arrow-little 0.8s linear 0s infinite;
+              animation: move-arrow-little 0.8s linear 0s infinite;
               @-webkit-keyframes move-arrow-little {
                 0% {
                   transform: translateX(0);
@@ -74,6 +74,7 @@ section.articles {
           }
           i {
             color: $main-color;
+            font-weight: bold;
           }
         }
       }
